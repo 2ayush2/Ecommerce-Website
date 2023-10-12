@@ -1,12 +1,17 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
-      deserunt explicabo minima, iure quisquam a quos facilis debitis nisi
-      incidunt ab quae nesciunt sit. Possimus eligendi inventore necessitatibus
-      incidunt.
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/cart" />
+          <Route path="/shop" />
+        </Routes>
+      </Router>
     </div>
   );
 }
